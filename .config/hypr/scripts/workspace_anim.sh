@@ -14,10 +14,13 @@ if (( DIFF == 1 )); then
     exit 0
 fi
 
+# Плавный расчет задержки:
+# d=2: задержка 0.130s
+# d>=6: задержка 0.055s
 STEP_DELAY=$(awk -v d="$DIFF" 'BEGIN {
-    delay = 0.16 / (d - 1);
-    if (delay > 0.080) delay = 0.080;
-    if (delay < 0.018) delay = 0.018;
+    # Базовое затухание по гиперболе
+    delay = 0.130 - ((d - 2) * 0.015);
+    if (delay < 0.055) delay = 0.055;
     printf "%.3f", delay;
 }')
 

@@ -148,6 +148,13 @@ hl.curve("spaceSpring", {
     dampening = 16,
 })
 
+hl.curve("fastSpring", {
+    type = "spring",
+    mass = 0.55,
+    stiffness = 290,
+    dampening = 22,
+})
+
 
 -- animations
 
@@ -212,11 +219,10 @@ hl.animation({
 hl.animation({
     leaf = "workspaces",
     enabled = true,
-    speed = 3.6,
-    spring = "spaceSpring",
+    speed = 5.0,
+    spring = "fastSpring",
     style = "slidevert",
 })
-
 
 -- input
 

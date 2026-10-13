@@ -278,7 +278,8 @@ hl.bind(mainMod .. " + Space", hl.dsp.layout("consume_or_expel next"))
 -- воркспейсы
 for i = 1, 10 do
     local key = i % 10
-    hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+    hl.bind(mainMod .. " + CTRL + " .. key, hl.dsp.focus({ workspace = i }))
+    hl.bind(mainMod .. " + " .. key, hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/workspace_anim.sh " .. i))
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 

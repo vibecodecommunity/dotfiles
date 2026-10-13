@@ -1,0 +1,79 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(14, 20, 27, 0.75);
+    color: #c8d3f5;
+    border: 2px solid rgba(23, 147, 209, 0.35);
+    border-radius: 12px;
+}
+
+/* кнопка запуска */
+#custom-launcher {
+    font-size: 17px;
+    color: #1793d1;
+    padding: 0 10px 0 14px;
+    transition: color 0.2s ease;
+}
+
+#custom-launcher:hover {
+    color: #38bdf8;
+}
+
+/* воркспейсы */
+#workspaces button {
+    padding: 0 8px;
+    color: #5a6f8f;
+    border-radius: 6px;
+    margin: 4px 1px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #c8d3f5;
+    background: rgba(23, 147, 209, 0.15);
+}
+
+#workspaces button.active {
+    color: #38bdf8;
+    background: rgba(23, 147, 209, 0.25);
+    border-bottom: 2px solid #38bdf8;
+}
+
+#workspaces button.urgent {
+    color: #f43f5e;
+}
+
+/* заголовок активного окна */
+#window {
+    color: #738aa6;
+    padding-left: 10px;
+}
+
+/* часы */
+#clock {
+    color: #c8d3f5;
+}
+
+/* правый блок модулей */
+#language,
+#pulseaudio,
+#network,
+#tray {
+    padding: 0 6px;
+    color: #c8d3f5;
+}
+
+#pulseaudio.muted {
+    color: #f43f5e;
+}
+
+#network.disconnected {
+    color: #f43f5e;
+}

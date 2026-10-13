@@ -1,0 +1,102 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    icon-theme: "breeze-dark";
+    display-drun: " ";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+@theme "/dev/null"
+
+* {
+    bg: rgba(14, 20, 27, 0.3);
+    border-col: rgba(23, 147, 209, 0.35);
+    active-bg: rgba(23, 147, 209, 0.25);
+    active-blue: #38bdf8;
+    launcher-blue: #1793d1;
+    fg: #c8d3f5;
+    muted: #5a6f8f;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 480px;
+    height: 500px;
+
+    location: south west;
+    anchor: south west;
+    x-offset: 14px;
+    y-offset: -15px;
+
+    background-color: @bg;
+    border: 2px;
+    border-color: @border-col;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: rgba(23, 147, 209, 0.08);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 0 0 10px 0;
+    border: 1px;
+    border-color: rgba(23, 147, 209, 0.25);
+}
+
+prompt {
+    text-color: @launcher-blue;
+    font: "JetBrainsMono Nerd Font Bold 14";
+    margin: 0 10px 0 2px;
+}
+
+entry {
+    placeholder: "Search applications...";
+    placeholder-color: @muted;
+    text-color: @fg;
+}
+
+listview {
+    columns: 4;
+    lines: 4;
+    cycle: true;
+    dynamic: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 10px;
+    scrollbar: false;
+}
+
+element {
+    orientation: vertical;
+    padding: 12px 6px;
+    border-radius: 8px;
+    text-color: @muted;
+}
+
+element selected {
+    background-color: @active-bg;
+    text-color: @active-blue;
+    border-radius: 8px;
+    border: 0px;
+}
+
+element-icon {
+    size: 42px;
+    horizontal-align: 0.5;
+    margin: 0 0 6px 0;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    font: "JetBrainsMono Nerd Font 10";
+}

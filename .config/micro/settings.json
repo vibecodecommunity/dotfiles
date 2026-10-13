@@ -1,0 +1,11 @@
+{
+  "clipboard": "external",
+  "mouse": true,
+  "mkparents": true,
+  "tabsize": 4,
+  "tabstospaces": true,
+  "softwrap": true,
+  "scrollbar": false,
+  "statusline": true,
+  "colorscheme": "arch-cyan"
+}

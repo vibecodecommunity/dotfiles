@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "margin-bottom": 10,
+    "margin-left": 14,
+    "margin-right": 14,
+    "spacing": 8,
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    
+    "modules-center": [
+        "clock"
+    ],
+    
+    "modules-right": [
+        "hyprland/language",
+        "pulseaudio",
+        "network",
+        "tray"
+    ],
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show drun -show-icons",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 35,
+        "separate-outputs": true
+    },
+
+    "clock": {
+        "format": " {:%H:%M   %d.%m}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "hyprland/language": {
+        "format": " {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": "󰖪 Off",
+        "tooltip-format": "{ipaddr}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+}

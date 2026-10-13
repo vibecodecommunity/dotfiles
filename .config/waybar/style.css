@@ -32,12 +32,6 @@ window#waybar {
     color: #5a6f8f;
     border-radius: 6px;
     margin: 4px 1px;
-    transition: all 0.2s ease;
-}
-
-#workspaces button:hover {
-    color: #c8d3f5;
-    background: rgba(23, 147, 209, 0.15);
 }
 
 #workspaces button.active {

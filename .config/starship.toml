@@ -1,0 +1,52 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](#1793d1)\
+$os\
+$username\
+[](bg:#182230 fg:#1793d1)\
+$directory\
+[](fg:#182230 bg:#38bdf8)\
+$git_branch\
+$git_status\
+[](fg:#38bdf8 bg:#0c1524)\
+$cmd_duration\
+[](fg:#0c1524)\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+style = "bg:#1793d1 fg:#060d18"
+symbols = { Arch = "󰣇 " }
+
+[username]
+show_always = false
+style_user = "bg:#1793d1 fg:#060d18"
+style_root = "bg:#f87171 fg:#060d18"
+format = '[$user ]($style)'
+
+[directory]
+style = "fg:#e0f2fe bg:#182230"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+style = "bg:#38bdf8 fg:#060d18"
+symbol = ""
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#38bdf8 fg:#060d18"
+format = '[$all_status$ahead_behind ]($style)'
+
+[cmd_duration]
+min_time = 2_000
+style = "bg:#0c1524 fg:#38bdf8"
+format = '[  $duration ]($style)'
+
+[character]
+disabled = false
+success_symbol = '[󰅂](bold #38bdf8)'
+error_symbol = '[󰅂](bold #f87171)'
